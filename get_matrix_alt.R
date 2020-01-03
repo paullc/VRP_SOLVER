@@ -19,7 +19,7 @@ get_matrix_alt<-function(datos){
                                 route_dist<-osrmRoute(src = nodes[i, 1:3], 
                                                       dst = nodes[j, 1:3], 
                                                       overview = "full",
-                                                      sp = TRUE)
+                                                      returnclass = "sp")
                                 distance[i,j]<-route_dist$distance
                                 time[i,j]<-route_dist$duration
                                 if (is.empty(allarcs)){
